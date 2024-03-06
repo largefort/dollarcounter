@@ -1,0 +1,41 @@
+/* style.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Just to add a neutral background color */
+}
+
+.game-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.counter {
+  font-size: 48px;
+  margin-bottom: 20px;
+  /* Adding a green border box around the counter */
+  border: 2px solid green;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0,128,0,0.5); /* Optional: Adding a subtle shadow for a nicer effect */
+  border-radius: 10px; /* Optional: Adding rounded corners */
+  background-color: white; /* Optional: Adding a background color */
+}
+
+/* Animation for the dollar increase */
+@keyframes increaseAnimation {
+  from { transform: scale(1); }
+  to { transform: scale(1.5); }
+}
+
+.animated {
+  animation: increaseAnimation 0.5s ease;
+  animation-fill-mode: forwards;
+}
