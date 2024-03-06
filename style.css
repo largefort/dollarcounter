@@ -5,8 +5,8 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0; /* Just to add a neutral background color */
+  font-family: 'Courier New', Courier, monospace; /* Using a more "typewriter" style font */
+  background-color: #f7f1e3; /* A parchment-like background color */
 }
 
 .game-container {
@@ -21,21 +21,21 @@ body, html {
 .counter {
   font-size: 48px;
   margin-bottom: 20px;
-  /* Adding a green border box around the counter */
-  border: 2px solid green;
+  border: 2px solid #8c7a65; /* Choosing a more rustic border color */
   padding: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0,128,0,0.5); /* Optional: Adding a subtle shadow for a nicer effect */
-  border-radius: 10px; /* Optional: Adding rounded corners */
-  background-color: white; /* Optional: Adding a background color */
+  box-shadow: 0px 0px 10px 0px rgba(140, 122, 101, 0.5);
+  border-radius: 10px;
+  background-color: #fbf5ed; /* A lighter parchment-like background for the counter */
+  transform: rotate(0deg); /* Ensuring rotation is reset before animation starts */
 }
 
-/* Animation for the dollar increase */
-@keyframes increaseAnimation {
-  from { transform: scale(1); }
-  to { transform: scale(1.5); }
+/* Wild West-themed animation */
+@keyframes wildWestAnimation {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.2) rotate(-5deg); }
+  100% { transform: scale(1) rotate(0deg); }
 }
 
 .animated {
-  animation: increaseAnimation 0.5s ease;
-  animation-fill-mode: forwards;
+  animation: wildWestAnimation 0.5s ease;
 }
